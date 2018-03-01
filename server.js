@@ -1,11 +1,12 @@
-//Globals
-// - express
+//express
 var express = require('express');
+//Server listener instance of express
 var serverApp = express();
+//Port env for heroku and local dev port
 var PORT = process.env.PORT || 3000;
-// - path for join function
+//Path for join function
 var path = require('path');
-// - body parser
+//Body Parser for JSON objects
 var bodyParser = require('body-parser');
 
 //requires endpoints files
