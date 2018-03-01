@@ -10,5 +10,9 @@ htmlApp.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/../public/home.html' ));
 });
 
+htmlApp.get('/survey', function(req, res){
+    res.sendFile(path.join(__dirname + '/../public/survey.html'))
+})
+
 //export html get request
 module.exports = htmlApp;
