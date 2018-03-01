@@ -4,6 +4,12 @@ var express = require('express');
 var htmlApp = express();
 //path for join function
 var path = require('path');
+//body parser
+var bodyParser = require('body-parser');
+
+//express data parsing
+htmlApp.use(bodyParser.urlencoded({ extended: false }));
+htmlApp.use(bodyParser.json());
 
 //html endpoint request
 htmlApp.get('/', function (req, res) {

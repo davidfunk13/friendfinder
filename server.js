@@ -9,6 +9,10 @@ var path = require('path');
 //Body Parser for JSON objects
 var bodyParser = require('body-parser');
 
+//express data parsing
+serverApp.use(bodyParser.urlencoded({ extended: false }));
+serverApp.use(bodyParser.json());
+
 //requires endpoints files
 var htmlRoutes = require('./app/routing/htmlRoutes');
 var apiRoutes = require('./app/routing/apiRoutes');
