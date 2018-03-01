@@ -1,10 +1,12 @@
+//express
 var express = require('express');
-var router = express.Router();
+//express instance
+var htmlApp = express();
+//path for join function
 var path = require('path');
 
-
-router.get('/', function (req, res) {
+htmlApp.get('/', function (req, res) {
     res.sendFile(path.join(__dirname + '/../public/home.html' ));
 });
 
-module.exports = router;
+module.exports = htmlApp;

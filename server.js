@@ -1,25 +1,25 @@
 //Globals
+// - express
 var express = require('express');
-var app = express();
+var serverApp = express();
 var PORT = process.env.PORT || 3000;
-var router = express.Router();
+// - path for join function
 var path = require('path');
+// - body parser
 var bodyParser = require('body-parser');
 
-//endpoint files
+//requires endpoints files
 var htmlRoutes = require('./routing/htmlRoutes');
 var apiRoutes = require('./routing/apiRoutes');
-//endpoints
-app.use(htmlRoutes);
-app.use(apiRoutes);
+
+//tell express server listener to use these endpoints
+serverApp.use(htmlRoutes);
+serverApp.use(apiRoutes);
 
 //Server Listener
-app.listen(PORT, function (error, response){
+serverApp.listen(PORT, function (error, response){
     if (error) {
         console.log(error);
     }
     console.log(`Application listening on port ${PORT}`);
 });
-
-//export router module
-module.exports = router;
