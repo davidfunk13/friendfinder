@@ -1,14 +1,14 @@
-//express
-var express = require('express');
-//express instance
-var apiApp = express();
-//path for join function
+// //express
+// // var express = require('express');
+// //express instance
+// var apiApp = express();
+// //path for join function
 var path = require('path');
 
-var bodyParser = require('body-parser');
+// var bodyParser = require('body-parser');
 
-apiApp.use(bodyParser.urlencoded({ extended: false }));
-apiApp.use(bodyParser.json());
+// apiApp.use(bodyParser.urlencoded({ extended: false }));
+// apiApp.use(bodyParser.json());
 
 var dummyData = [
     {
@@ -34,16 +34,26 @@ var dummyData = [
     }
   ];
   
-//get request
-apiApp.get('/api/friends', function(req, res){
+// //get request 
+// app.get('/api/friends', function(req, res){
+//     res.json(dummyData);
+// })
+// app.post('/api/friends', function (req, res) {
+//     var friend = req.body;
+//     dummyData.push(friend)
+//     console.log(friend);
+//     res.json(friend)
+// });
+
+//export express get 
+module.exports = function(app) {
+  app.get('/api/friends', function(req, res){
     res.json(dummyData);
 })
-apiApp.post('/api/friends', function (req, res) {
+app.post('/api/friends', function (req, res) {
     var friend = req.body;
     dummyData.push(friend)
     console.log(friend);
     res.json(friend)
 });
-
-//export express get 
-module.exports = apiApp;
+}
