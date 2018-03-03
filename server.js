@@ -9,20 +9,16 @@ var path = require('path');
 //Body Parser for JSON objects
 var bodyParser = require('body-parser');
 
+//static
+app.use(express.static(__dirname + '/app/public/'));
+
 //express data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-//requires endpoints files
-// var htmlRoutes = require('./app/routing/htmlRoutes');
-// var apiRoutes = require('./app/routing/apiRoutes');
-
-//tell express server listener to use these endpoints
-// serverApp.use(htmlRoutes);
-// serverApp.use(apiRoutes);
-
 require('./app/routing/apiRoutes')(app);
 require('./app/routing/htmlRoutes')(app);
+
 //Server Listener
 app.listen(PORT, function (error, response){
     if (error) {
