@@ -17,7 +17,7 @@ $(document).ready(function () {
             q9: $('#q9').val(),
             q10: $('#q10').val(),
         }
-$.post('/api/friends', surveyValues, function(data){
+    $.post('/api/friends', surveyValues, function(data){
     if (data) {
         console.log('success')
     }
