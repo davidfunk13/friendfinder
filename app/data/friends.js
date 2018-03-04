@@ -1,3 +1,4 @@
+
 let friends = [
     {
         name: 'Dave',

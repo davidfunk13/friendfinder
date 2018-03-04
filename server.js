@@ -11,6 +11,8 @@ var bodyParser = require('body-parser');
 
 //static
 app.use(express.static(__dirname + '/app/public/'));
+app.use(express.static(__dirname + '/app/javascript/'));
+
 
 //express data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,6 +20,8 @@ app.use(bodyParser.json());
 
 require('./app/routing/apiRoutes')(app);
 require('./app/routing/htmlRoutes')(app);
+// var friends =require('./app/data/friends')
+// console.log(friends)
 
 //Server Listener
 app.listen(PORT, function (error, response){
