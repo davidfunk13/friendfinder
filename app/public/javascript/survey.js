@@ -1,10 +1,9 @@
 $(document).ready(function () {
     console.log('document ready.')
 
-    //button values
-
-    $(document).on('click', '#submit', function () {
-
+    $('#submit').on('click', function (event) {
+        console.log('clicked')
+        event.preventDefault();
         var surveyValues = {
 
             q1: $('#q1').val(),
@@ -18,6 +17,14 @@ $(document).ready(function () {
             q9: $('#q9').val(),
             q10: $('#q10').val(),
         }
-    console.log(surveyValues)
+$.post('/api/friends', surveyValues, function(data){
+    if (data) {
+        console.log('success')
+    }
+    else {
+        console.log('fail');
+    }
+})
     })
+    // module.exports = surveyValues;
 });

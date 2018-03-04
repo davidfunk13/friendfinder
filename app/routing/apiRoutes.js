@@ -4,9 +4,11 @@ let friends = require('../data/friends');
 
 module.exports = function(app) {
   app.get('/api/friends', function(req, res){
-    res.json(friends)
+    res.json(friends[1].name);
 });
-app.post('/api/friend', function (req, res) {
-
+app.post('/api/friends', function (req, res) {
+  var userValues = req.body;
+  var userAnswersArray= Array(userValues)
+  console.log(userAnswersArray)
 });
 }
