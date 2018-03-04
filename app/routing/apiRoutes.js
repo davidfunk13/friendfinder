@@ -8,8 +8,8 @@ module.exports = function (app) {
   });
   app.post('/api/friends', function (req, res) {
     var userValues = req.body;
-    Vals = Object.values(userValues)
-    console.log(Vals)
+    userValuesArray = Object.values(userValues)
+    console.log(`User: ${userValuesArray} Comparisons: ${friends[0].scores} ${friends[1].scores}`)
     // console.log(userAnswers);
     res.json(userValues);
     // console.log(friends[1].scores)

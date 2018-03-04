@@ -17,6 +17,23 @@ $(document).ready(function () {
             q9: $('#q9').val(),
             q10: $('#q10').val(),
         }
+        let valCheck = Object.values(surveyValues);
+        if (valCheck.includes('')) {
+            console.log('blank answer');
+            alert('please answer all questions and try again');
+            return;
+        }
+        if (!valCheck.includes('')) {
+            console.log('passed check')
+        }
+        // for (var i = 0; i < valCheck.length; i++) {
+        //     if (valCheck[i] === "") {
+        //         console.log('blank answer')
+        //         alert('please answer all questions and try again')
+        //         return;
+        //     }
+            // console.log(valCheck[i])
+        // } 
     $.post('/api/friends', surveyValues, function(data){
     if (data) {
         console.log('success')
