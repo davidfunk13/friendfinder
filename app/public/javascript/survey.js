@@ -24,8 +24,9 @@ $(document).ready(function () {
         if (!valCheck.includes('')) {
             $.post('/api/friends', surveyValues, function (data) {
                 if (data) {
-                    $('#photo').attr('src', data.photo)
-                    $('#name').html(data.name)
+                    $('#photo').attr('src', data.photo);
+                    $('#name').html(data.name);
+                    $('#pointdifferential').html(`<p> Total Point Differential:</p>${data.pointDifferential}`);
                     console.log(data)
                     console.log('success')
                 }
