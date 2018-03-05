@@ -7,6 +7,7 @@ module.exports = function (app) {
     res.json(friends);
   });
   app.post('/api/friends', function (req, res) {
+    totalDifferences = []
     var userValues = req.body;
     userValuesArray = Object.values(userValues)
     // console.log(`User: ${userValuesArray} Comparisons: ${friends[0].scores} ${friends[1].scores}`);
@@ -29,9 +30,17 @@ module.exports = function (app) {
         if (differenceGetter.length === 10) {
           const reducer = (accumulator, currentValue) => accumulator + currentValue;
           console.log(`total :${differenceGetter.reduce(reducer)}`);
+          totalDifferences.push(differenceGetter.reduce(reducer));
         }
       }
     }
+    console.log(totalDifferences)
     res.json(userValues);
+    Array.min = function(totalDifferences){
+      return Math.min.apply( Math, totalDifferences);
+  };
+  var smallestDifference = Array.min(totalDifferences)
+  var smallestDifferenceIndex = totalDifferences.indexOf(smallestDifference)
+  console.log(friends[smallestDifferenceIndex].name)
   });
 }
