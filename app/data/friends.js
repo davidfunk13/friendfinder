@@ -34,7 +34,7 @@ let friends = [
     },
     {
         name: 'Shaq',
-        photo: 'https://imgur.com/a/KcOl1.jpg',
+        photo: 'https://i.imgur.com/StH2QTY.jpg',
         scores: [
             3,
             2,
