@@ -9,8 +9,6 @@ module.exports = function (app) {
     totalDifferences = []
     var userValues = req.body;
     userValuesArray = Object.values(userValues)
-    // console.log(`User: ${userValuesArray} Comparisons: ${friends[0].scores} ${friends[1].scores}`);
-    // var differenceGetter = [];
     for (var i = 0; i < friends.length; i++) {
       let friend = friends[i].scores;
       let you = userValuesArray
