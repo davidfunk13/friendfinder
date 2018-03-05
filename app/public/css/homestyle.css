@@ -1,67 +1,54 @@
-a,
-a:focus,
-a:hover {
-    color: #fff;
-}
-
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-    color: #333;
-    text-shadow: none;
-    background-color: #fff;
-    border: .05rem solid #fff;
-}
-
 html,
 body {
-    height: 100%;
-    background-color: #333;
+    margin: 20px;
+    align-content: center;
 }
 
-body {
-    text-align: left;
-    color: #fff;
-}
-.welcome{
-    text-align: left
-}
-.headertext {
-    font-size: 70px
-}
-.content,
 .header {
+    /* width: 100%; */
     border: 1px solid black;
+    margin-bottom: 30px;
+}
+
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
 }
 
 .content {
-    padding-top: 5px;
-    padding-left: 15px;
-    text-align: left;
-    background: gray;
-}
-.header{
-    height: 200px;
-    margin-bottom: 30px;
-}
-.instructions {
-    text-align: left;
-}
-
-.btn-lg {
-    padding: .75rem 1.25rem;
-    font-weight: 700;
-}
-
-.modal-body {
-    color: black;
-}
-#photo {
-    width:100%;
-    height: 100%;
+    padding: 30px;
+    border: 1px solid black;
 }
 
 .submit {
     margin-top: 20px;
-    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+.modal-body {
+    /* text-decoration: underline; */
+    text-align: center;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+#name {
+    text-decoration: underline;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#photo {
+    width: 100%;
+    border: 2px solid black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#pointdifferential {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
 }

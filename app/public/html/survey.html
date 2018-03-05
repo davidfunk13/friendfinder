@@ -12,190 +12,181 @@
 </head>
 
 <body>
-    <!-- Modal -->
-    <!-- Modal -->
-<div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+    <!-- modal -->
+    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Match Found!
+                    <div id="name"></div>
+                    <img id="photo">
+                    <div id="pointdifferential"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          Match Found!
-          <div id="name"></div>
-          <img id="photo">
-          <div id="pointdifferential"></div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
-
-    <body class="text-center">
-        <div class="container">
-            <div class="row">
-                <div class="header col-md-12">
-                    <div class="headertext">Da Friendz Survey</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="content col-md-12">
-                    <h1 class="welcome">Welcome!</h1>
-                    <p class="instructions">Welcome to Dave's Friend Finder! Answer all of the questions as truthfully as possible and hit submit to be matched with your new best friend!</p>
-                    <h3>
-                        <strong>Question 1</strong>
-                    </h3>
-                    <h4>I make friends easily.</h4>
-                    <select id="q1">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                    <h3>
-                        <strong>Question 2</strong>
-                    </h3>
-                    <h4>I worry about things.</h4>
-                    <select id="q2">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                    <h3>
-                        <strong>Question 3</strong>
-                    </h3>
-                    <h4>I get irritated easily.</h4>
-                    <select id="q3">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-
-                    <h3>
-                        <strong>Question 4</strong>
-                    </h3>
-                    <h4>I like to visit new places.</h4>
-                    <select id="q4">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-
-                    <h3>
-                        <strong>Question 5</strong>
-                    </h3>
-                    <h4>How much do you despise groups people that take up the whole sidewalk and are oblivious to people trying
-                        to get by them?</h4>
-                    <select id="q5">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-
-                    <h3>
-                        <strong>Question 6</strong>
-                    </h3>
-                    <h4>I am often in a bad mood.</h4>
-                    <select id="q6">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-
-                    <h3>
-                        <strong>Question 7</strong>
-                    </h3>
-                    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-                    <select id="q7">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-                    <h3>
-                        <strong>Question 8</strong>
-                    </h3>
-                    <h4>I am afraid to draw attention to myself.</h4>
-                    <select id="q8">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-                    <h3>
-                        <strong>Question 9</strong>
-                    </h3>
-                    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts
-                        or not.</h4>
-                    <select id="q9">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-
-                    <h3>
-                        <strong>Question 10</strong>
-                    </h3>
-                    <h4>I can't make up my mind.</h4>
-                    <select id="q10">
-                        <option value=""></option>
-                        <option value="1">1 (Strongly Disagree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Strongly Agree)</option>
-                    </select>
-                    <button type="button" class="btn btn-primary btn-lg btn-block submit" data-toggle="modal" data-target="#matchModal" id="submit">Submit</button>
-                      </button>
-                </div>
-
+    <!-- end modal -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 header">
+                <img class="img-responsive" src="../images/header.png" alt="">
             </div>
         </div>
-        </div>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script src="../javascript/survey.js"></script>
-        <!-- <script src="../../routing/apiRoutes.js"></script> -->
-    </body>
+
+        <!-- </div>
+    <div class="container"> -->
+        <div class="row">
+            <div class="content col-md-12">
+                <h1 class="welcome">Welcome!</h1>
+                <p class="instructions">Welcome to Dave's Friend Finder! Answer all of the questions as truthfully as possible and hit submit to
+                    be matched with your new best friend!</p>
+                <h4>
+                    <strong>Question 1</strong>
+                </h4>
+                <h6>I make friends easily.</h6>
+                <select id="q1">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 2</strong>
+                </h4>
+                <h6>I worry about things.</h6>
+                <select id="q2">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 3</strong>
+                </h4>
+                <h6>I get irritated easily.</h6>
+                <select id="q3">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 4</strong>
+                </h4>
+                <h6>I like to visit new places.</h6>
+                <select id="q4">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 5</strong>
+                </h4>
+                <h6>How much do you despise groups people that take up the whole sidewalk and are oblivious to people trying
+                    to get by them?</h6>
+                <select id="q5">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 6</strong>
+                </h4>
+                <h6>I am often in a bad mood.</h6>
+                <select id="q6">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 7</strong>
+                </h4>
+                <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+                <select id="q7">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 8</strong>
+                </h4>
+                <h6>I am afraid to draw attention to myself.</h6>
+                <select id="q8">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 9</strong>
+                </h4>
+                <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or
+                    not.
+                </h6>
+                <select id="q9">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <h4>
+                    <strong>Question 10</strong>
+                </h4>
+                <h6>I can't make up my mind.</h6>
+                <select id="q10">
+                    <option value=""></option>
+                    <option value="1">1 (Strongly Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Strongly Agree)</option>
+                </select>
+                <button type="button" class="btn btn-primary btn-lg btn-block submit" data-toggle="modal" data-target="#matchModal" id="submit">Submit</button>
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="../javascript/survey.js"></script>
+    <!-- <script src="../../routing/apiRoutes.js"></script> -->
+</body>
 
 </html>
