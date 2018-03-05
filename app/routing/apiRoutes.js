@@ -29,12 +29,6 @@ module.exports = function (app) {
         if (differenceGetter.length === 10) {
           const reducer = (accumulator, currentValue) => accumulator + currentValue;
           console.log(`total :${differenceGetter.reduce(reducer)}`);
-
-          // for (var k = 0; k < differenceGetter.length; k++) {
-          //   sum += sum )+= parseInt(differenceGetter[i]
-          //   // console.log(differenceGetter[i])
-          // }
-          // console.log(`total${sum}`)
         }
       }
     }
