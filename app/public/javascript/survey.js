@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    console.log('document ready.')
-
     $('#submit').on('click', function (event) {
         console.log('clicked')
         event.preventDefault();
@@ -24,24 +22,14 @@ $(document).ready(function () {
             return;
         }
         if (!valCheck.includes('')) {
-            console.log('passed check')
+            $.post('/api/friends', surveyValues, function(data){
+                if (data) {
+                    console.log('success')
+                }
+                else {
+                    console.log('fail');
+                }
+            })
         }
-        // for (var i = 0; i < valCheck.length; i++) {
-        //     if (valCheck[i] === "") {
-        //         console.log('blank answer')
-        //         alert('please answer all questions and try again')
-        //         return;
-        //     }
-            // console.log(valCheck[i])
-        // } 
-    $.post('/api/friends', surveyValues, function(data){
-    if (data) {
-        console.log('success')
-    }
-    else {
-        console.log('fail');
-    }
-})
     })
-    // module.exports = surveyValues;
 });
