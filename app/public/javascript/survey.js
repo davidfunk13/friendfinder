@@ -22,8 +22,11 @@ $(document).ready(function () {
             return;
         }
         if (!valCheck.includes('')) {
-            $.post('/api/friends', surveyValues, function(data){
+            $.post('/api/friends', surveyValues, function (data) {
                 if (data) {
+                    $('#photo').attr('src', data.photo)
+                    $('#name').html(data.name)
+                    console.log(data)
                     console.log('success')
                 }
                 else {

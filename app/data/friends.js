@@ -2,7 +2,7 @@
 let friends = [
     {
         name: 'Dave',
-        photo: 'https://imgur.com/TaYObLf',
+        photo: 'https://imgur.com/TaYObLf.jpg',
         scores: [
             5,
             1,
@@ -18,7 +18,7 @@ let friends = [
     },
     {
         name: 'Pam',
-        photo: 'https://imgur.com/Pmt9iDZ',
+        photo: 'https://i.imgur.com/Pmt9iDZ.jpg',
         scores: [
             3,
             2,
